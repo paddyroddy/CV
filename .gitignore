@@ -5,3 +5,6 @@
 *.out
 *.synctex.gz
 *.fdb_latexmk
+*.blg
+*.bbl
+*.vscode
