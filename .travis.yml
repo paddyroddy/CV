@@ -5,4 +5,4 @@ script:
 - wget https://raw.githubusercontent.com/blang/latex-docker/master/latexdockercmd.sh
 - chmod +x latexdockercmd.sh
 - ./latexdockercmd.sh latexmk -pdf -outdir=./_build CV.tex
-- ./dropbox_uploader.sh upload _build/CV.pdf ${TRAVIS_BRANCH}/patrick_roddy_cv-latest.pdf
+- ./dropbox_uploader.sh upload _build/CV.pdf ${TRAVIS_BRANCH}/patrick_roddy_cv.pdf
