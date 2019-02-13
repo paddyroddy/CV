@@ -6,4 +6,3 @@ script:
 - chmod +x latexdockercmd.sh
 - ./latexdockercmd.sh latexmk -pdf -outdir=./_build CV.tex
 - ./dropbox_uploader.sh upload _build/CV.pdf ${TRAVIS_BRANCH}/patrick_roddy_cv-latest.pdf
-- ./dropbox_uploader.sh upload _build/CV.pdf ${TRAVIS_BRANCH}/patrick_roddy_cv-${TRAVIS_JOB_NUMBER}.pdf
