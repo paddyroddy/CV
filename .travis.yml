@@ -4,6 +4,7 @@ before_install:
 script:
 - wget https://raw.githubusercontent.com/blang/latex-docker/master/latexdockercmd.sh
 - chmod +x latexdockercmd.sh
+- mkdir -pv _build
 - ./latexdockercmd.sh latexmk -pdf -outdir=./_build CV.tex
 - ./dropbox_uploader.sh upload _build/patrick_roddy_cv.pdf ${TRAVIS_BRANCH}/patrick_roddy_cv-latest.pdf
 - ./dropbox_uploader.sh upload _build/patrick_roddy_cv.pdf ${TRAVIS_BRANCH}/patrick_roddy_cv-${TRAVIS_JOB_NUMBER}.pdf
