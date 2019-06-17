@@ -9,8 +9,8 @@
 \documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
 
 % moderncv themes
-\moderncvstyle{casual}                             % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
-\moderncvcolor{blue}                               % colour options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
+\moderncvstyle{banking}                             % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
+\moderncvcolor{green}                               % colour options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
 %\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
 %\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
 
@@ -19,16 +19,18 @@
 %\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
 
 % adjust the page margins
-\usepackage[scale=0.8]{geometry}
+\usepackage[scale=0.85]{geometry}
 %\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
 %\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 \usepackage[super]{nth}
 \usepackage{verbatim}
+\usepackage{textcomp}
+\usepackage{multicol}
 
 % personal data
 \name{Patrick}{Roddy}
 \title{Curriculum Vit\ae}                               % optional, remove / comment the line if not wanted
-\address{14 Fishponds Road, Kenilworth, CV8 1EX}{6 York House, 400-404 York Way, London, N7 9LR}
+% \address{14 Fishponds Road, Kenilworth, CV8 1EX}{6 York House, 400--404 York Way, London, N7 9LR}
 %\address{street and number}{postcode city}{country}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
 % \phone[mobile]{+447974323428}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
 %\phone[fixed]{+2~(345)~678~901}
@@ -54,21 +56,24 @@
 %----------------------------------------------------------------------------------
 %            content
 %----------------------------------------------------------------------------------
+\vspace*{-10mm}
 \begin{document}
 	%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
 	%-----       resume       ---------------------------------------------------------
-	\makecvtitle
+	\makecvtitle{}
 	
 	\section{Education}
-	\cventry{2017--2021}{PhD in Computational Cosmology}{Mullard Space Science Laboratory}{UCL}{}{
+	\cventry{2017--2021}{PhD in Computational Cosmology}{University College London}{London}{}{
 		\begin{itemize}
+			\item Department: Mullard Space Science Laboratory
 			\item Studentship: STFC Centre for Doctoral Training in Data Intensive Science
 			\item Thesis: \emph{Novel Spherical Informatics Techniques for Studying Cosmic Evolution}
 			\item Supervisor: Dr.~Jason McEwen
 			\item Group Project: \emph{Towards Developing Intrusion Detection Techniques}, NCC Group
-		\end{itemize}}
+		\end{itemize}
+	}
 	
-	\cventry{2013--2017}{MSci in Natural Sciences}{University of Cambridge}{}{}{
+	\cventry{2013--2017}{MSci in Natural Sciences}{University of Cambridge}{Cambridge}{}{
 		\begin{itemize}
 			\item \textbf{Part III}: Astrophysics
 			\begin{itemize}
@@ -78,15 +83,31 @@
 			\item \textbf{Part II}: Astrophysics
 			\item \textbf{Part IB}: Physics A, Physics B \& Chemistry A
 			\item \textbf{Part IA}: Physics, Chemistry, Maths \& Computer Science
-	\end{itemize}}
+		\end{itemize}
+	}
 	
-	\cventry{2011--2013}{A-Levels}{Castle Sixth Form}{Kenilworth}{\textit{4A*}}{Chemistry, Physics, Maths and Further Maths}  % Arguments not required can be left empty
+	% \cventry{2011--2013}{A-Levels}{Castle Sixth Form}{Kenilworth}{\textit{4A*}}{Chemistry, Physics, Maths and Further Maths}  % Arguments not required can be left empty
 	
-	\cventry{2009--2011}{GCSEs}{Kenilworth School}{}{\textit{10A* and 2A}}{}
+	% \cventry{2009--2011}{GCSEs}{Kenilworth School}{}{\textit{10A* and 2A}}{}
 	
 	\section{Experience}
 	\subsection{Work}
-	\cventry{2019}{Teaching Assistant}{London Business School}{}{}{Assisting with the teaching of a python course to the MBA/MFA/MiF courses. This involves going around and helping the students to do the exercises and answer any questions they have.}
+	\cventry{2019}{Teaching Assistant}{London Business School}{London}{}{
+		\begin{itemize}
+			\item Assisting with the teaching of a python course to various degree courses.
+		\end{itemize}
+	}
+
+	\cventry{2017--Present}{Webmaster \& Teaching/Outreach Supervisor}{University College London}{London}{}{
+		\begin{multicols}{2}
+		\begin{itemize}
+			\item Co-webmaster for the CDT website
+			\item Created an attendance monitoring tool for the department
+			\item Marking undergraduate assessments
+			\item Outreach at the UCL observatory
+		\end{itemize}
+	\end{multicols}
+	}
 
 	% \cventry{2018--Present}{Webmaster}{UCL}{London}{}{I am co-webmaster for the CDT website. This involves working with the administrative team to put content on the existing website. We are also looking improve the whole layout of the website.}
 
@@ -96,7 +117,7 @@
 
 	% \cventry{2015--2017}{Outreach Supervisor}{Institute of Astronomy}{Cambridge}{}{Working with the public as well as local scout/guide groups to assist them in observing and presentations in astrophysics.}
 
-	\subsection{Summer Internships}
+	\subsection{Internships}
 	\cventry{2017}{Data Scientist}{Satavia}{Cambridge}{}{
 		\begin{itemize}
 			\item Work: Simulating flight trajectories in order to obtain environmental data at each point.
@@ -105,14 +126,14 @@
 	
 	\cventry{2016}{Software Developer}{MathWorks}{Cambridge}{}{
 			\begin{itemize}
-				\item Work: Research, design and prototype alternative solutions to replace a redundant GUI.
+				\item Work: Research, design and prototype alternative solutions to replace a redundant GUI\@.
 				\item Skills: Bug fixing, Design specifications, HTML/CSS, JavaScript, MATLAB, Presenting.
 		\end{itemize}}
 	
 	\cventry{2015}{Software Test Engineer}{MediaTek}{Cambourne}{}{
 		\begin{itemize}
-			\item Work: Writing .NET based unit tests, test automation, and creating an IoT device.
-			\item Skills: Arduino, Batch, C/C\texttt{++}, C\texttt{\#}, IoT, .NET, Test Automation, Unit Testing.
+			\item Work: Writing {.}NET based unit tests, test automation, and creating an IoT device.
+			\item Skills: Arduino, Batch, C/C\texttt{++}, C\texttt{\#}, IoT, {.}NET, Test Automation, Unit Testing.
 	\end{itemize}}
 	
 	\cventry{2014}{Clean Energy Engineer}{Ricardo}{Leamington Spa}{}{
@@ -139,23 +160,23 @@
 	
 	\section{Computer Skills}
 	\cvitem{Tools}{
-		\textsc{Bash}, 
-		\textsc{C/C\texttt{++}}, 
-		\textsc{Cython}, 
-		\textsc{Docker}, 
-		\textsc{Git}, 
-		\textsc{HTML/CSS}, 
+		\texttt{Bash}, 
+		\texttt{C/C\texttt{++}}, 
+		\texttt{Cython}, 
+		\texttt{Docker}, 
+		\texttt{Git}, 
+		\texttt{HTML/CSS}, 
 		\LaTeX, 
-		\textsc{pandas}, 
-		\textsc{python}, 
-        \textsc{scikit-learn}, 
-        \textsc{Spark}, 
-		\textsc{SQL}, 
-		\textsc{TensorFlow}, 
-		\textsc{tmux}, 
-		\textsc{Travis CI}, 
-		\textsc{UNIX}, 
-		\textsc{Vim}.
+		\texttt{pandas}, 
+		\texttt{python},\\
+        \texttt{scikit-learn}, 
+        \texttt{Spark}, 
+		\texttt{SQL}, 
+		\texttt{TensorFlow}, 
+		\texttt{tmux}, 
+		\texttt{Travis CI}, 
+		\texttt{UNIX}, 
+		\texttt{Vim}.
 	}
 	
 	% \section{Awards}

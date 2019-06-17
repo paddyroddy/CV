@@ -6,3 +6,4 @@
 *.out
 *.vscode
 *.synctex.gz
+__latexindent_temp.tex
