@@ -3,7 +3,7 @@ name: Build LaTeX
 on: [push, pull_request]
 
 jobs:
-    chktex_and_deploy:
+    deploy:
         runs-on: ubuntu-latest
         steps:
             - name: checkout source
