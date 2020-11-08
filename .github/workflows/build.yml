@@ -1,0 +1,32 @@
+name: Build LaTeX
+
+on: [push, pull_request]
+
+jobs:
+    chktex_and_deploy:
+        runs-on: ubuntu-latest
+        steps:
+            - name: checkout source
+              uses: actions/checkout@v2
+
+            - name: Run chktex
+              uses: xu-cheng/texlive-action/full@v1
+              with:
+                  run: |
+                      chktex CV.tex | tee /dev/stderr | (! grep -q ^)
+
+            - name: Build PDF
+              uses: xu-cheng/texlive-action/full@v1
+              with:
+                  run: |
+                      latexmk -quiet -pdf CV.tex
+
+            - name: Set up Dropbox
+              run: |
+                  echo "OAUTH_ACCESS_TOKEN=$OAUTH_ACCESS_TOKEN" > ~/.dropbox_uploader
+              env:
+                  OAUTH_ACCESS_TOKEN: ${{secrets.OAUTH_ACCESS_TOKEN}}
+
+            - name: Upload PDFs
+              run: |
+                  ./dropbox_uploader.sh upload CV.pdf patrick_roddy_cv.pdf
