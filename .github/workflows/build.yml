@@ -12,8 +12,8 @@ jobs:
             - name: Build PDF
               uses: xu-cheng/latex-action@v2
               with:
-                  root_file: CV.tex
-                  latexmk_use_lualatex: true
+                  root_file: |
+                      CV.tex
 
             - name: Set up Dropbox
               run: |
