@@ -17,9 +17,9 @@ jobs:
 
             - name: Set up Dropbox
               run: |
-                  echo "OAUTH_ACCESS_TOKEN=$OAUTH_ACCESS_TOKEN" > ~/.dropbox_uploader
+                  echo "OAUTH_REFRESH_TOKEN=$OAUTH_REFRESH_TOKEN" > ~/.dropbox_uploader
               env:
-                  OAUTH_ACCESS_TOKEN: ${{secrets.OAUTH_ACCESS_TOKEN}}
+                  OAUTH_REFRESH_TOKEN: ${{secrets.OAUTH_REFRESH_TOKEN}}
 
             - name: Upload PDFs
               run: |
