@@ -1,9 +1,13 @@
-*.pdf
+__latexindent_temp.tex
 *.aux
+*.bak*
+*.bbl
+*.blg
 *.fdb_latexmk
 *.fls
 *.log
 *.out
-*.vscode
+*.pdf
 *.synctex.gz
-__latexindent_temp.tex
+*.synctex(busy)
+*.vscode

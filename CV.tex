@@ -1,5 +1,5 @@
 %% start of file `template.tex'.
-%% Copyright 2006-2015 Xavier Danaux (xdanaux@gmail.com).
+%% Copyright 2006-2015 Xavier Danaux (xdanaux@gmail.com), 2020-2021 moderncv maintainers (github.com/moderncv).
 %
 % This work may be distributed and/or modified under the
 % conditions of the LaTeX Project Public License version 1.3c,
@@ -9,215 +9,165 @@
 \documentclass[10pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
 
 % moderncv themes
-\moderncvstyle{banking}                             % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
-\moderncvcolor{green}                               % colour options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
+\moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
+\moderncvcolor{green}                               % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
 %\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
 %\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
 
 % character encoding
-\usepackage[utf8]{inputenc}                       % if you are not using xelatex or lualatex, replace by the encoding you are using
+\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
 %\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
 
 % adjust the page margins
-\usepackage[scale=0.85]{geometry}
+\usepackage[scale=0.88]{geometry}
 %\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
-%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
-\usepackage[super]{nth}
-\usepackage{verbatim}
-\usepackage{textcomp}
-\usepackage{multicol}
+%\setlength{\makecvheadnamewidth}{10cm}            % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 
 % personal data
 \name{Patrick}{Roddy}
 \title{Curriculum Vit\ae}                               % optional, remove / comment the line if not wanted
-% \address{14 Fishponds Road, Kenilworth, CV8 1EX}{6 York House, 400--404 York Way, London, N7 9LR}
-%\address{street and number}{postcode city}{country}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
-% \phone[mobile]{+447974323428}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
-%\phone[fixed]{+2~(345)~678~901}
-%\phone[fax]{+3~(456)~789~012}
+% \born{4 July 1776}                                 % optional, remove / comment the line if not wanted
+% \address{street and number}{postcode city}{country}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
+% \phone[mobile]{+1~(234)~567~890}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
+% \phone[fixed]{+2~(345)~678~901}
+% \phone[fax]{+3~(456)~789~012}
 \email{patrickjamesroddy@gmail.com}                               % optional, remove / comment the line if not wanted
 \homepage{paddyroddy.github.io}                         % optional, remove / comment the line if not wanted
+
+% Social icons
 \social[linkedin]{patrickjamesroddy}                        % optional, remove / comment the line if not wanted
+% \social[xing]{john_doe}                           % optional, remove / comment the line if not wanted
 \social[twitter]{paddy_roddy}                             % optional, remove / comment the line if not wanted
 \social[github]{paddyroddy}                              % optional, remove / comment the line if not wanted
-%\extrainfo{additional information}                 % optional, remove / comment the line if not wanted
-%\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
-%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+% \social[gitlab]{jdoe}                              % optional, remove / comment the line if not wanted
+% \social[stackoverflow]{7359333/paddyroddy}            % optional, remove / comment the line if not wanted
+% \social[bitbucket]{jdoe}                           % optional, remove / comment the line if not wanted
+% \social[skype]{jdoe}                               % optional, remove / comment the line if not wanted
+% \social[orcid]{0000-0002-6271-1700}                  % optional, remove / comment the line if not wanted
+% \social[researchgate]{jdoe}                        % optional, remove / comment the line if not wanted
+% \social[researcherid]{jdoe}                        % optional, remove / comment the line if not wanted
+% \social[telegram]{jdoe}                            % optional, remove / comment the line if not wanted
+% \social[whatsapp]{12345678901}                     % optional, remove / comment the line if not wanted
+% \social[signal]{12345678901}                       % optional, remove / comment the line if not wanted
+% \social[matrix]{@johndoe:matrix.org}               % optional, remove / comment the line if not wanted
+% \social[googlescholar]{OFigHUwAAAAJ}            % optional, remove / comment the line if not wanted
+
+
+% \extrainfo{additional information}                 % optional, remove / comment the line if not wanted
+% \photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+% \quote{Some quote}                                 % optional, remove / comment the line if not wanted
 
 % bibliography adjustments (only useful if you make citations in your resume, or print a list of publications using BibTeX)
 %   to show numerical labels in the bibliography (default is to show no labels)
-\makeatletter\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}\makeatother
+%\makeatletter\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}\makeatother
+\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}
 %   to redefine the bibliography heading string ("Publications")
 %\renewcommand{\refname}{Articles}
 
-% bibliography with multiple entries
+% bibliography with mutiple entries
 %\usepackage{multibib}
 %\newcites{book,misc}{{Books},{Others}}
 %----------------------------------------------------------------------------------
 %            content
 %----------------------------------------------------------------------------------
-\vspace*{-10mm}
 \begin{document}
-	%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
-	%-----       resume       ---------------------------------------------------------
-	\makecvtitle{}
-	
-	\section{Education}
-	\cventry{2017--2021}{PhD in Computational Cosmology}{University College London}{London}{}{
-		\begin{itemize}
-			\item Studentship: STFC Centre for Doctoral Training in Data Intensive Science
-			\item Thesis: \emph{Novel Spherical Informatics Techniques for Studying Cosmic Evolution}
-			\item Supervisor: Dr.~Jason McEwen
-			\item Group Project: \emph{Towards Developing Intrusion Detection Techniques}, NCC Group
-			\item Placement: \emph{Signal Processing \& Enrichment} Team, Vortexa
-		\end{itemize}
-	}
-	
-	\cventry{2013--2017}{MSci in Natural Sciences}{University of Cambridge}{Cambridge}{}{
-		\begin{itemize}
-			\item \textbf{Part III}: Astrophysics
-			\begin{itemize}
-				\item Thesis:  \emph{Lyman Alpha Profile of Simulated Galaxies}
-				\item Supervisors: Prof.~Martin Haehnelt \& Dr.~Taysun Kimm
-			\end{itemize}
-			\item \textbf{Part II}: Astrophysics
-			\item \textbf{Part IB}: Physics A, Physics B \& Chemistry A
-			\item \textbf{Part IA}: Physics, Chemistry, Maths \& Computer Science
-		\end{itemize}
-	}
-	
-	% \cventry{2011--2013}{A-Levels}{Castle Sixth Form}{Kenilworth}{\textit{4A*}}{Chemistry, Physics, Maths and Further Maths}  % Arguments not required can be left empty
-	
-	% \cventry{2009--2011}{GCSEs}{Kenilworth School}{}{\textit{10A* and 2A}}{}
-	
-	\section{Experience}
-	\subsection{Work}
-	\cventry{2019--Present}{Teaching Assistant}{London Business School}{London}{}{
-		\begin{itemize}
-			\item Assisting with the teaching of various courses in python, statistics, databases \& Microsoft Excel.
-		\end{itemize}
-	}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle{}
 
-	\cventry{2020--Present}{Teaching Assistant}{University College London}{London}{School of Management}{
-		\begin{itemize}
-			\item Assisting with the teaching of a Microsoft Excel based course.
-		\end{itemize}
-	}
+\section{Education}
+\cventry{2017--2021}{PhD in Computational Cosmology}{University College London}{London}{}{
+	\begin{itemize}
+		\item Studentship: STFC Centre for Doctoral Training in Data Intensive Science
+		\item Thesis: \emph{Novel Spherical Informatics Techniques for Studying Cosmic Evolution}
+		\item Supervisor: Dr.~Jason McEwen
+		\item Group Project: \emph{Towards Developing Intrusion Detection Techniques}, NCC Group
+		\item Placement: \emph{Signal Processing \& Enrichment} Team, Vortexa
+	\end{itemize}
+}
 
-	\cventry{2017--Present}{Webmaster \& Teaching/Outreach Supervisor}{University College London}{London}{Physics \& Astronomy}{
-		\begin{multicols}{2}
-		\begin{itemize}
-			\item Co-webmaster for the CDT website
-			\item Help the delivery of a machine learning course
-			\item Created an attendance monitoring tool for the department
-			\item Marking undergraduate assessments
-			\item Outreach at the UCL observatory
-			\item Supervising a computing project
-		\end{itemize}
-	\end{multicols}
-	}
+\cventry{2013--2017}{MSci in Natural Sciences}{University of Cambridge}{Cambridge}{}{
+	\begin{itemize}
+		\item \textbf{Part III}: Astrophysics
+		\item \textbf{Part II}: Astrophysics
+		\item \textbf{Part IB}: Physics A, Physics B \& Chemistry A
+		\item \textbf{Part IA}: Physics, Chemistry, Maths \& Computer Science
+	\end{itemize}
+}
 
-	% \cventry{2018--Present}{Webmaster}{UCL}{London}{}{I am co-webmaster for the CDT website. This involves working with the administrative team to put content on the existing website. We are also looking improve the whole layout of the website.}
+\section{Master's Thesis}
+\cvitem{title}{\emph{Lyman Alpha Profile of Simulated Galaxies}}
+\cvitem{supervisors}{Martin Haehnelt \& Taysun Kimm}
 
-	% \cventry{2017--Present}{Teaching Supervisor}{UCL}{London}{}{Marking undergraduate homeworks \& assessments. Created a tool for the department to help with their attendance monitoring system.}
+\section{Experience}
+\subsection{Work}
+\cventry{2019--Present}{Teaching Assistant}{London Business School}{London}{}{
+	\begin{itemize}
+		\item Assist with the teaching of various courses in python, statistics, databases \& Microsoft Excel.
+	\end{itemize}
+}
 
-	% \cventry{2017--2018}{Outreach  Supervisor}{UCLO}{UCL}{London}{Marking undergraduate homeworks \& assessments. Working with the public to show them the telescopes at the Mill Hill Observatory.}
+\cventry{2020--Present}{Teaching Assistant}{University College London}{London}{School of Management}{
+	\begin{itemize}
+		\item Assist with the teaching of a Microsoft Excel based course.
+	\end{itemize}
+}
 
-	% \cventry{2015--2017}{Outreach Supervisor}{Institute of Astronomy}{Cambridge}{}{Working with the public as well as local scout/guide groups to assist them in observing and presentations in astrophysics.}
+\cventry{2017--Present}{Webmaster \& Teaching/Outreach Supervisor}{University College London}{London}{Physics \& Astronomy}{
+	\cvlistdoubleitem{Co-webmaster for the CDT website}{Mark undergraduate assessments}
+	\cvlistdoubleitem{Help the delivery of a machine learning course}{Outreach at the UCL observatory}
+	\cvlistdoubleitem{Created an attendance monitoring tool for the department}{Supervise a computing project}
+}
 
-	\subsection{Internships}
-	\cventry{2019--2020}{Data Engineer}{Vortexa}{London}{6~Months}{
-		\begin{itemize}
-			\item Work: Solving problems using shipping data as part of the Signal Processing \& Enrichment team.
-			\item Skills: Airflow, AWS, Docker, Git, Kubernetes, Pandas, PostgresSQL, Python, React-Admin, Sklearn.
-		\end{itemize}}
-
-	\cventry{2017}{Data Scientist}{Satavia}{Cambridge}{3~Months}{
-		\begin{itemize}
-			\item Work: Simulating flight trajectories in order to obtain environmental data at each point.
-			\item Skills: Azure Cosmos DB, Git, Data Analytics, Parallel Computing, PostgresSQL, Python.
-		\end{itemize}}
-	
-	\cventry{2016}{Software Developer}{MathWorks}{Cambridge}{3~Months}{
-			\begin{itemize}
-				\item Work: Research, design and prototype alternative solutions to replace a redundant GUI\@.
-				\item Skills: Bug fixing, Design specifications, HTML/CSS, JavaScript, MATLAB, Presenting.
-		\end{itemize}}
-	
-	\cventry{2015}{Software Test Engineer}{MediaTek}{Cambourne}{3~Months}{
-		\begin{itemize}
-			\item Work: Writing {.}NET based unit tests, test automation, and creating an IoT device.
-			\item Skills: Arduino, Batch, C/C\texttt{++}, C\texttt{\#}, IoT, {.}NET, Test Automation, Unit Testing.
+\subsection{Internships}
+\cventry{2019--2020}{Data Engineer}{Vortexa}{London}{6~Months}{
+	\begin{itemize}
+		\item Work: Solving problems using shipping data as part of the Signal Processing \& Enrichment team.
+		\item Skills: Airflow, AWS, Docker, Git, Kubernetes, Pandas, PostgresSQL, Python, React-Admin, Sklearn.
 	\end{itemize}}
-	
-	\cventry{2014}{Clean Energy Engineer}{Ricardo}{Leamington Spa}{3~Months}{
-		\begin{itemize}
-			\item Work: Exploitation of a product in the global market for wind turbines.
-			\item Skills: \LaTeX, Market Research, Microsoft Excel, Report Writing.
-	\end{itemize}}
-	
-	% \subsection{Committee Roles}
-	% \cventry{2018--Present}{Department Representative}{London Cosmology Discussion Meeting}{London}{}{Helping to co-organise the plan for future meetings as well as hosting the annual department meeting.}
 
-	% \cventry{2018--Present}{Treasurer}{UCL Running, Athletics \& Cross Country}{London}{}{In charge of processing club payments through the student union. Liaise with the club president in a vice-president role.}
-	
-	% \cventry{2016--2017}{Club Captain}{Cambridge University Hare \& Hounds}{Cambridge}{}{Figurehead of the club, attend various meetings, organise races, provide regular communication to club members, and work with Oxford counterpart.}
-	
-	% \cventry{2014--2017}{President}{Robinson College Cross Country \& Athletics}{Cambridge}{}{I set up the RCCCA to combine the existing cross country and athletics clubs so that there would be a larger membership and greater interest for new kit.}
-	
-	% \cventry{2015--2016}{Men's Vice-Captain \& Transport Secretary}{Cambridge University Hare \& Hounds}{Cambridge}{}{Organising the coach travel to the various races throughout the year and standing in for the Men's Captain when needed.}
-	
-	% \cventry{2014--2015}{Honorary Secretary}{Cambridge University Hare \& Hounds}{Cambridge}{}{Organising training camps, club race entries, accommodation and financial administration.}
-	
-	% \subsection{Voluntary Roles}
-	% \cventry{2010--Present}{Assistant Scout Leader}{Waverley Scout Troop}{Kenilworth}{}{Develop young people, organisation of activities/camps, programme development, core member of the leadership team.}
-	
-	% \section{Computer Skills}
-	% \cvitem{Tools}{
-	% 	\texttt{Bash},
-	% 	\texttt{C/C\texttt{++}},
-	% 	\texttt{Cython},
-	% 	\texttt{Docker},
-	% 	\texttt{Git},
-	% 	\texttt{HTML/CSS},
-	% 	\LaTeX,
-	% 	\texttt{pandas},
-	% 	\texttt{python},\\
-    %     \texttt{scikit-learn},
-    %     \texttt{Spark},
-	% 	\texttt{SQL},
-	% 	\texttt{TensorFlow},
-	% 	\texttt{tmux},
-	% 	\texttt{Travis CI},
-	% 	\texttt{UNIX},
-	% 	\texttt{Vim}.
-	% }
-	
-	% \section{Awards}
-	% \cvdoubleitem{2015}{Fred Boyne Sporting \\ Achievement Award}{2013--2017}{Cambridge Cross \\ Country Full Blue}
-	% \cvdoubleitem{2013}{Queen's Scout Award}{2013}{Gold Duke of Edinburgh Award}
-	% \cvdoubleitem{2012}{Explorer Belt}{2012}{Full Driving Licence}
-	
-	% \section{Languages}
-	% \cvdoubleitem{French}{AS Level}{Spanish}{GCSE Level}
-	
-	% \section{Interests}
-	% \cvitem{Sport}{Running, Cycling, Swimming, Orienteering, Duathlon, Triathlon}
-	% \cvitem{Other}{Scouting, Camping/Hiking, Guitar, Comedy}
-	
-	% Publications from a BibTeX file without multibib
-	%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
-	%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
-	%\nocite{*}
-	%\bibliographystyle{plain}
-	%\bibliography{publications}                        % 'publications' is the name of a BibTeX file
-	
-	% Publications from a BibTeX file using the multibib package
-	%\section{Publications}
-	%\nocitebook{book1,book2}
-	%\bibliographystylebook{plain}
-	%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
-	%\nocitemisc{misc1,misc2,misc3}
-	%\bibliographystylemisc{plain}
-	%\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
+\cventry{2017}{Data Scientist}{Satavia}{Cambridge}{3~Months}{
+	\begin{itemize}
+		\item Work: Simulating flight trajectories in order to obtain environmental data at each point.
+		\item Skills: Azure Cosmos DB, Git, Data Analytics, Parallel Computing, PostgresSQL, Python.
+	\end{itemize}}
+
+\cventry{2016}{Software Developer}{MathWorks}{Cambridge}{3~Months}{
+	\begin{itemize}
+		\item Work: Research, design and prototype alternative solutions to replace a redundant GUI\@.
+		\item Skills: Bug fixing, Design specifications, HTML/CSS, JavaScript, MATLAB, Presenting.
+	\end{itemize}}
+
+\cventry{2015}{Software Test Engineer}{MediaTek}{Cambourne}{3~Months}{
+	\begin{itemize}
+		\item Work: Writing {.}NET based unit tests, test automation, and creating an IoT device.
+		\item Skills: Arduino, Batch, C/C\texttt{++}, C\texttt{\#}, IoT, {.}NET, Test Automation, Unit Testing.
+	\end{itemize}}
+
+\cventry{2014}{Clean Energy Engineer}{Ricardo}{Leamington Spa}{3~Months}{
+	\begin{itemize}
+		\item Work: Exploitation of a product in the global market for wind turbines.
+		\item Skills: \LaTeX, Market Research, Microsoft Excel, Report Writing.
+	\end{itemize}}
+
+% Publications from a BibTeX file without multibib
+%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
+%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{publications}                        % 'publications' is the name of a BibTeX file
+
+% Publications from a BibTeX file using the multibib package
+%\section{Publications}
+%\nocitebook{book1,book2}
+%\bibliographystylebook{plain}
+%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
+%\nocitemisc{misc1,misc2,misc3}
+%\bibliographystylemisc{plain}
+%\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
+
+%\clearpage\end{CJK*}                              % if you are typesetting your resume in Chinese using CJK; the \clearpage is required for fancyhdr to work correctly with CJK, though it kills the page numbering by making \lastpage undefined
 \end{document}
+
+
+%% end of file `template.tex'.
